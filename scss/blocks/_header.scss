@@ -1,26 +1,10 @@
-.site-header__inner{
+.header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: darkcyan;
 }
 
-.sitenav__list{
+.site-nav__list {
   display: flex;
   @include list-unstyle;
-}
-
-.sitenav__item:not(:last-child){
-  margin-right: 30px;
-}
-
-.sitenav__link{
-  color: red;
-  text-decoration: none;
-}
-
-@include desktop-first(700px){
-  .sitenav{
-    display: none;
-  }
 }
