@@ -2,6 +2,7 @@
 :root {
   --main-white-color: #FFF;
   --main-black-color: #000;
+  --main-body-bg-color: #fafafa;
 }
 
 @font-face {
@@ -364,6 +365,7 @@ html {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -372,6 +374,9 @@ img {
 }
 
 body {
+  font-family: "Public Sans", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -381,6 +386,8 @@ body {
           flex-direction: column;
   height: 100%;
   margin: 0;
+  padding: 0;
+  background-color: var(--main-body-bg-color);
 }
 
 /* STICKY-FOOTER */
