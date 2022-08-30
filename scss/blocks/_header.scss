@@ -3,6 +3,7 @@
 .header {
   padding-top: 32px;
   padding-bottom: 40px;
+  z-index: 100000;
 }
 
 .header__wrapper {
@@ -66,19 +67,23 @@
   animation-direction: alternate;
 }
 
+.site-nav__link--active {
+  color: #5FB4A2;
+}   
+
 @keyframes nav-on {
 
   from {
-      transform: translateY(-300px);
+    transform: translateY(-300px);
   }
 
   to {
-      transform: translateY(0px);
+    transform: translateY(0px);
   }
 
 }
 
-@include  media-tablet {
+@include media-tablet {
 
   .header {
     padding-top: 64px;
@@ -87,7 +92,7 @@
 
   .site-nav {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     position: static;
     background-color: transparent;
     max-width: none;
@@ -116,10 +121,6 @@
 
   .header__btn {
     display: none;
-  }
-
-  .site-nav__link--active {
-    color: #5FB4A2;
   }
 
 }

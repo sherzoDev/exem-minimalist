@@ -1,0 +1,80 @@
+/* Site Article Start */
+
+#article {
+    padding: 96px 0;
+}
+
+.article__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.article__title {
+    margin: 0;
+    font-family: "Ibarra Real Nova", "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: -0.357143px;
+    color: #33323d;
+}
+
+.article__link {
+    @include link-unstyle;
+    margin-top: 40px;
+    padding: 16px 32px 16px 32px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #33323d;
+    border: 1px solid #33323d;
+    transition: all .5s;
+
+    &:hover {
+        color: #ffffff;
+        background-color: #33323d;
+    }
+}
+
+@media only screen and (min-width:375px) {
+    .article__title {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    .article__title-box {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .article__wrapper {
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    .article__title-box {
+        min-width: 350px;
+        margin: 0;
+    }
+
+    .article__line {
+        width: 100%;
+        max-width: 3000px;
+        height: 1px;
+        margin: 0 32px;
+        background-color: #33323d;
+    }
+`
+    .article__link {
+        margin-top: 0;
+        white-space: nowrap;
+    }
+}
+
+/* End of Interesting Project Section */

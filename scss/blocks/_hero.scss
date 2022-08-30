@@ -1,0 +1,174 @@
+.hero__wrapper {
+    position: relative;
+}
+
+.hero-bgbox {
+    background-image: url("../images/hero-bg-img-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 221px;
+}
+
+.hero__title {
+    margin: 24px 0 32px 0;
+    font-family: "Ibarra Real Nova", "Times New Roman", serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 42px;
+    letter-spacing: -0.357143px;
+    color: var(--Grayish-Dark-Blue);
+}
+
+.hero__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 36px 0 0;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #203a4c;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: #5fb4a2;
+    }
+
+    &::before {
+        width: 16px;
+        height: 12px;
+        margin-right: 36px;
+        padding: 25px 25px;
+        background-color: #1d3445;
+        background-image: url("../images/links-arrow.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        content: "";
+    }
+}
+
+.hero__link:hover::before {
+    transition: 0.4s;
+    background-image: url("../images/link-arrow-white.svg");
+    background-color: #56a292;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 192dpi),
+only screen and (min-resolution: 2dppx) {
+    .hero-bgbox {
+        background-image: url("../images/hero-bg-img-mobile@2x.jpg");
+    }
+}
+
+@media only screen and (min-width:375px) {
+    .hero-bgbox {
+        max-width: 500px;
+        height: 271px;
+    }
+
+    .hero__title {
+        font-size: 39px;
+    }
+}
+
+@media only screen and (min-width:440px) {
+    .hero-bgbox {
+        height: 330px;
+    }
+}
+
+@media only screen and (min-width:560px) {
+    .hero-bgbox {
+        max-width: 560px;
+        height: 400px;
+        background-image: url("../images/hero-bg-img-tablet.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        .hero-bgbox {
+            background-image: url("../images/hero-bg-img-tablet@2x.jpg");
+        }
+    }
+
+    .hero__text-box {
+        max-width: 514px;
+    }
+}
+
+@media only screen and (min-width:620px) {
+    .hero-bgbox {
+        max-width: 650px;
+        height: 500px;
+    }
+
+    .hero__title {
+        font-size: 42px;
+    }
+}
+
+@media only screen and (min-width:700px) {
+    .hero-bgbox {
+        max-width: 900px;
+        height: 600px;
+    }
+
+    .hero__text-box {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        max-width: 514px;
+        padding-top: 56px;
+        background: #fafafa;
+    }
+
+    .hero__title {
+        margin-top: 0;
+        font-size: 45px;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    .hero-bgbox {
+        width: 100%;
+        max-width: 100%;
+        background-image: url("../images/hero-bg-img.jpg");
+    }
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+        .hero-bgbox {
+            background-image: url("../images/hero-bg-img@2x.jpg");
+        }
+    }
+}
+
+@media only screen and (min-width:1100px) {
+    .hero__text-box {
+        max-width: 460px;
+        padding-right: 65px;
+    }
+
+    .hero__title {
+        margin-bottom: 53px;
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
