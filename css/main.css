@@ -5,9 +5,34 @@
   --main-body-bg-color: #fafafa;
 }
 
+/* FONTS */
+/* ibarra-real-nova-regular - latin */
 @font-face {
-  font-family: sans-serif;
-  src: url(./fonts);
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ibarra-real-nova-v20-latin-regular.woff2") format("woff2"), url("../fonts/ibarra-real-nova-v20-latin-regular.woff") format("woff");
+}
+/* ibarra-real-nova-700 - latin */
+@font-face {
+  font-family: "Ibarra Real Nova";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ibarra-real-nova-v20-latin-700.woff2") format("woff2"), url("../fonts/ibarra-real-nova-v20-latin-700.woff") format("woff");
+}
+/* public-sans-regular - latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/public-sans-v14-latin-regular.woff2") format("woff2"), url("../fonts/public-sans-v14-latin-regular.woff") format("woff");
+}
+/* public-sans-700 - latin */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/public-sans-v14-latin-700.woff2") format("woff2"), url("../fonts/public-sans-v14-latin-700.woff") format("woff");
 }
 /**
  * 1. Correct the line height in all browsers.
@@ -420,6 +445,12 @@ body {
   padding: 0 34px;
 }
 
+/* Site Header Start */
+.header {
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
 .header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -430,13 +461,130 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.site-nav {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  background-color: #33323D;
+  max-width: 223px;
+  width: 100%;
+  display: none;
+}
+
+.header__btn {
+  background-image: url("../images/btn-open.svg");
+  width: 24px;
+  height: 13px;
+  border: none;
+  background-color: transparent;
 }
 
 .site-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin: 0;
   padding-left: 0;
   list-style: none;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.site-nav__item:not(:last-child) {
+  padding-bottom: 32px;
+}
+
+.site-nav__link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--main-white-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.site-nav-on .header__btn {
+  width: 18px;
+  height: 19px;
+  background-image: url("../images/close-btn.svg");
+}
+
+.site-nav-on html {
+  pointer-events: none;
+}
+
+.site-nav-on .site-nav {
+  display: block;
+  -webkit-animation: nav-on 0.8s;
+          animation: nav-on 0.8s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes nav-on {
+  from {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes nav-on {
+  from {
+    -webkit-transform: translateY(-300px);
+            transform: translateY(-300px);
+  }
+  to {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header {
+    padding-top: 64px;
+    padding-bottom: 47px;
+  }
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    position: static;
+    background-color: transparent;
+    max-width: none;
+    padding: 0;
+  }
+  .site-nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+  }
+  .site-nav__item:not(:last-child) {
+    margin: 0;
+    padding-bottom: 0;
+  }
+  .site-nav__item:nth-child(2) {
+    padding-left: 42px;
+    padding-right: 43px;
+  }
+  .site-nav__link {
+    color: #33323D;
+  }
+  .header__btn {
+    display: none;
+  }
+  .site-nav__link--active {
+    color: #5FB4A2;
+  }
 }/*# sourceMappingURL=main.css.map */
