@@ -510,6 +510,9 @@ body {
   width: 18px;
   height: 19px;
   background-image: url("../images/close-btn.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .site-nav-on html {
