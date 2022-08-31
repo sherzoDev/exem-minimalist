@@ -69,7 +69,7 @@
 
 .site-nav__link--active {
   color: #5FB4A2;
-}   
+}
 
 @keyframes nav-on {
 
@@ -84,6 +84,11 @@
 }
 
 @include media-tablet {
+
+
+  .site-nav__link--active {
+    color: #5FB4A2 !important;
+  }
 
   .header {
     padding-top: 64px;

@@ -1,0 +1,125 @@
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form__title {
+    font-family: 'Ibarra Real Nova';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.357143px;
+    color: #33323D;
+}
+
+.form-box__label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 30px;
+    color: #33323D;
+    opacity: 0.8;
+}
+
+.form__span {
+    padding-bottom: 8px;
+}
+
+.form-box__input {
+    border: none;
+    padding: 9px 16px;
+    background-color: #E6E6E7;
+    border: 1px solid transparent;
+
+    &:not(:placeholder-shown):not(:focus):valid {
+        border: 1px solid #5FB4A2;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid {
+        border: 1px solid #F43030;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid+.form__error {
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid #5FB4A2;
+    }
+
+}
+
+.form-box__textarea {
+    background-color: #E6E6E7;
+    resize: none;
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    height: 96px;
+
+    &:not(:placeholder-shown):not(:focus):valid {
+        border: 1px solid #5FB4A2;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid {
+        border: 1px solid #F43030;
+    }
+
+    &:not(:placeholder-shown):not(:focus):invalid+.form__error {
+        opacity: 1;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid #5FB4A2;
+    }
+
+}
+
+.form__error {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    color: #F43030;
+    padding-top: 5px;
+    opacity: 0;
+}
+
+.form__btn {
+    background-color: #203A4C;
+    color: #fff;
+    border: none;
+    padding: 17px 24px;
+    margin-bottom: 80px;
+    margin-top: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: #5FB4A2;
+    }
+
+}
+
+@include mobile-first(992px) {
+
+    .form__title {
+        margin: 0;
+        padding: 0;
+    }
+
+    .form__wrapper {
+        display: flex;
+    }
+
+    .form-box {
+        max-width: 635px;
+        width: 100%;
+        margin-left: auto;
+    }
+
+}
